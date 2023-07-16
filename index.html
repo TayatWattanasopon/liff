@@ -72,6 +72,11 @@
     }
 
     async function getUserProfile() {
+      const profile = await liff.getProfile()
+      document.getElementById("userId").append(profile.userId)
+      document.getElementsById("statusMessage").append(profile.statusMessage)
+      document.getElementsById("displayname").append(profile.displayName)
+
     }
 
     function getEnvironment() {
@@ -94,7 +99,7 @@
       // alert("LINE Developers x Skooldio Tranining")
       await liff.init({ liffId: "2000145691-d0O9K6aq" })
       getEnvironment()
-      // getUserProfile()
+      getUserProfile()
       // getContext()
       // getFriendship()
       // createUniversalLink()
