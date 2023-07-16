@@ -75,12 +75,12 @@
     }
 
     function getEnvironment() {
-      document.getElementById("os").append(liff.getOS())
+      document.getElementById("os").append( liff.getOS() )
       document.getElementById("language").append(liff.getLanguage())
       document.getElementById("version").append(liff.getVersion())
       document.getElementById("accessToken").append(liff.getAccessToken())
       document.getElementById("isInClient").append(liff.isInClient())
-      if (liff.isInClient()){
+      if (liff.isInClient()) {
         document.getElementById("btnLogOut").style.display = "none"
       } else {
         document.getElementById("btnMsg").style.display = "none"
@@ -91,7 +91,7 @@
     }
 
     async function main() {
-      alert("LINE Developers x Skooldio Tranining")
+      // alert("LINE Developers x Skooldio Tranining")
       await liff.init({ liffId: "2000145691-d0O9K6aq" })
       getEnvironment()
       // getUserProfile()
